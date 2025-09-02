@@ -1,0 +1,31 @@
+educure_db=# INSERT INTO employees (name, department, salary, hire_date)
+educure_db-# VALUES
+educure_db-#     ('鳥山 信夫', 'IT', 60000, '2023-09-15'),
+educure_db-#     ('山本 三郎', '開発', 58000, '2023-09-20');
+INSERT 0 2
+educure_db=# SELECT
+educure_db-#     employee_id,
+educure_db-#     name,
+educure_db-#     department,
+educure_db-#     salary,
+educure_db-#     hire_date,
+educure_db-#     manager_id
+educure_db-# FROM
+educure_db-#     employees
+educure_db-# ORDER BY employee_id;
+ employee_id |   name    |   department   | salary | hire_date  | manager_id
+-------------+-----------+----------------+--------+------------+------------
+           1 | 山田 太郎 | 営業           |  55000 | 2022-01-15 |
+           3 | 佐藤 健   | IT             |  60000 | 2021-06-10 |
+           4 | 鈴木 花子 | マーケティング |  52000 | 2020-11-20 |
+           5 | 田中 一郎 | 開発           |  58000 | 2019-03-15 |
+           6 | 山田 太郎 | 営業           |  55000 | 2022-01-15 |
+           8 | 佐藤 健   | IT             |  60000 | 2021-06-10 |
+           9 | 鈴木 花子 | マーケティング |  52000 | 2020-11-20 |
+          10 | 田中 一郎 | 開発           |  58000 | 2019-03-15 |
+          11 | 鳥山 信夫 | IT             |  60000 | 2023-09-15 |
+          12 | 山本 三郎 | 開発           |  58000 | 2023-09-20 |
+(10 行)
+
+
+educure_db=#
