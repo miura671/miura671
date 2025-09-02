@@ -1,0 +1,18 @@
+educure_db=# SELECT
+educure_db-#     name,
+educure_db-#     salary
+educure_db-# FROM
+educure_db-#     employees
+educure_db-# WHERE
+educure_db-#     salary >= 50000;
+   name    | salary
+-----------+--------
+ 山田 太郎 |  55000
+ 佐藤 健   |  60000
+ 鈴木 花子 |  52000
+ 田中 一郎 |  58000
+ 山田 太郎 |  55000
+ 佐藤 健   |  60000
+ 鈴木 花子 |  52000
+ 田中 一郎 |  58000
+(8 行)
