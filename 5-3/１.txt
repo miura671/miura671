@@ -1,0 +1,29 @@
+educure_db=# CREATE TABLE books (
+educure_db(#     id SERIAL PRIMARY KEY,
+educure_db(#     title TEXT NOT NULL,
+educure_db(#     publication_year INT NOT NULL,
+educure_db(#     author TEXT NOT NULL
+educure_db(# );
+CREATE TABLE
+educure_db=# INSERT INTO books (title, publication_year, author)
+educure_db-# VALUES
+educure_db-#     ('過去のSQL', 1999, '田中　一郎'),
+educure_db-#     ('現在のSQL', 2005, '田中　一郎'),
+educure_db-#     ('やさしいSQL', 2001, '山田　花子'),
+educure_db-#     ('高度なSQL', 2010, '佐藤　次郎');
+INSERT 0 4
+educure_db=# SELECT
+educure_db-#     title,
+educure_db-#     publication_year
+educure_db-# FROM
+educure_db-#     books
+educure_db-# WHERE
+educure_db-#     author = '田中　一郎';
+   title   | publication_year
+-----------+------------------
+ 過去のSQL |             1999
+ 現在のSQL |             2005
+(2 行)
+
+
+educure_db=#

@@ -1,0 +1,45 @@
+educure_db=# ALTER TABLE books
+educure_db-# ADD COLUMN genre TEXT,
+educure_db-# ADD COLUMN loan_date DATE;
+ALTER TABLE
+educure_db=# INSERT INTO books (title, author, publication_year, genre)
+educure_db-# VALUES ('SQLの応用', '鈴木　三郎', 2019, '技術書');
+INSERT 0 1
+educure_db=# SELECT
+educure_db-#     title,
+educure_db-#     author,
+educure_db-#     publication_year,
+educure_db-#     genre,
+educure_db-#     loan_date
+educure_db-# FROM
+educure_db-#     books
+educure_db-# WHERE
+educure_db-#     title = 'SQLの応用'
+educure_db-#     AND author = '鈴木　三郎';
+   title   |   author   | publication_year | genre  | loan_date
+-----------+------------+------------------+--------+-----------
+ SQLの応用 | 鈴木　三郎 |             2019 | 技術書 |
+(1 行)
+
+
+educure_db=# INSERT INTO books (title, author, publication_year, genre)
+educure_db-# VALUES ('データベース設計論', '高橋　美香', 2022, '技術書');
+INSERT 0 1
+educure_db=# SELECT
+educure_db-#     title,
+educure_db-#     author,
+educure_db-#     publication_year,
+educure_db-#     genre,
+educure_db-#     loan_date
+educure_db-# FROM
+educure_db-#     books
+educure_db-# WHERE
+educure_db-#     title = 'データベース設計論'
+educure_db-#     AND author = '高橋　美香';
+       title        |   author   | publication_year | genre  | loan_date
+--------------------+------------+------------------+--------+-----------
+ データベース設計論 | 高橋　美香 |             2022 | 技術書 |
+(1 行)
+
+
+educure_db=#
