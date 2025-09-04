@@ -1,0 +1,111 @@
+educure_db=# DELETE FROM books
+educure_db-# WHERE author = '山田花子';
+DELETE 0
+educure_db=# SELECT
+educure_db-#     title,
+educure_db-#     author,
+educure_db-#     publication_year,
+educure_db-#     genre,
+educure_db-#     loan_date
+educure_db-# FROM
+educure_db-#     books;
+       title        |   author   | publication_year | genre  | loan_date
+--------------------+------------+------------------+--------+-----------
+ 過去のSQL          | 田中　一郎 |             1999 |        |
+ 現在のSQL          | 田中　一郎 |             2005 |        |
+ やさしいSQL        | 山田　花子 |             2001 |        |
+ 高度なSQL          | 佐藤　次郎 |             2010 |        |
+ SQLの応用          | 鈴木　三郎 |             2019 | 技術書 |
+ データベース設計論 | 高橋　美香 |             2022 | 技術書 |
+(6 行)
+
+
+educure_db=# SELECT COUNT(*) FROM books;
+ count
+-------
+     6
+(1 行)
+
+
+educure_db=# SELECT COUNT(*) FROM books;
+ count
+-------
+     6
+(1 行)
+
+
+educure_db=# DELETE FROM books
+educure_db-# WHERE author = '松本五郎';
+DELETE 0
+educure_db=#
+educure_db=# INSERT INTO books (title, author, publication_year, genre, loan_date)
+educure_db-# VALUES ('SQLの冒険', '山田 花子', 2010, '小説', '2010-09-10');
+INSERT 0 1
+educure_db=# SELECT
+educure_db-#     title,
+educure_db-#     author,
+educure_db-#     publication_year,
+educure_db-#     genre,
+educure_db-#     loan_date
+educure_db-# FROM
+educure_db-#     books
+educure_db-# WHERE
+educure_db-#     author = '山田 花子';
+   title   |  author   | publication_year | genre | loan_date
+-----------+-----------+------------------+-------+------------
+ SQLの冒険 | 山田 花子 |             2010 | 小説  | 2010-09-10
+(1 行)
+
+
+
+
+
+
+
+
+
+
+＜修正後＞
+
+
+educure_db=# DELETE FROM books
+educure_db-# WHERE author = '山田花子';
+DELETE 0
+educure_db=# SELECT title, author, publication_year, genre, loan_date
+educure_db-# FROM books;
+       title        |   author   | publication_year | genre  | loan_date
+--------------------+------------+------------------+--------+------------
+ 過去のSQL          | 田中　一郎 |             1999 |        |
+ 現在のSQL          | 田中　一郎 |             2005 |        |
+ やさしいSQL        | 山田　花子 |             2001 |        |
+ 高度なSQL          | 佐藤　次郎 |             2010 |        |
+ SQLの応用          | 鈴木　三郎 |             2019 | 技術書 |
+ データベース設計論 | 高橋　美香 |             2022 | 技術書 |
+ SQLの冒険          | 山田 花子  |             2010 | 小説   | 2010-09-10
+ 未来のSQL          | 田中 太郎  |             2023 | 技術書 | 2023-10-01
+ 未来のSQL          | 田中 太郎  |             2023 | 技術書 | 2023-10-01
+ 現在のSQL          | 田中 一郎  |             2005 | 小説   | 2005-07-20
+ 恋するデータベース | 高橋 美香  |             2015 | 小説   | 2015-03-14
+ プログラマーの恋   | 森田 健一  |             2020 | 小説   | 2020-12-05
+(12 行)
+
+
+educure_db=# SELECT COUNT(*) FROM books;
+ count
+-------
+    12
+(1 行)
+
+
+educure_db=# DELETE FROM books WHERE author = '松本五郎';
+DELETE 0
+educure_db=#
+
+
+
+
+
+
+
+
+

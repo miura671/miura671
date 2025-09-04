@@ -1,0 +1,40 @@
+educure_db=# SELECT
+educure_db-#     title,
+educure_db-#     author,
+educure_db-#     publication_year,
+educure_db-#     genre,
+educure_db-#     loan_date
+educure_db-# FROM
+educure_db-#     books
+educure_db-# WHERE
+educure_db-#     publication_year >= 2000
+educure_db-#     AND genre = '小説'
+educure_db-# ORDER BY
+educure_db-#     publication_year DESC;
+   title   |  author   | publication_year | genre | loan_date
+-----------+-----------+------------------+-------+------------
+ SQLの冒険 | 山田 花子 |             2010 | 小説  | 2010-09-10
+(1 行)
+
+
+
+
+
+＜修正後＞
+educure_db=# SELECT
+educure_db-#     title,
+educure_db-#     author,
+educure_db-#     publication_year,
+educure_db-#     genre,
+educure_db-#     loan_date
+educure_db-# FROM books
+educure_db-# WHERE publication_year >= 2000
+educure_db-#   AND genre = '小説'
+educure_db-# ORDER BY publication_year DESC;
+       title        |  author   | publication_year | genre | loan_date
+--------------------+-----------+------------------+-------+------------
+ プログラマーの恋   | 森田 健一 |             2020 | 小説  | 2020-12-05
+ 恋するデータベース | 高橋 美香 |             2015 | 小説  | 2015-03-14
+ SQLの冒険          | 山田 花子 |             2010 | 小説  | 2010-09-10
+ 現在のSQL          | 田中 一郎 |             2005 | 小説  | 2005-07-20
+(4 行)
