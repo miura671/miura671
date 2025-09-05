@@ -1,0 +1,7 @@
+5-5-3
+
+educure_db=# UPDATE employees
+educure_db-# SET department = '営業'
+educure_db-# WHERE name = '田中 一郎';
+UPDATE 1
+educure_db=#

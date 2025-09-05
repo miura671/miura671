@@ -1,0 +1,16 @@
+5-5-4
+
+educure_db=# DELETE FROM employees
+educure_db-# WHERE department = '人事';
+DELETE 1
+educure_db=# SELECT COUNT(*) FROM employees;
+ count
+-------
+     8
+(1 行)
+
+
+educure_db=# DELETE FROM employees
+educure_db-# WHERE department = '経理';
+DELETE 0
+educure_db=#

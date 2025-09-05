@@ -1,0 +1,37 @@
+5-5-2
+educure_db=# SELECT
+educure_db-#     name AS "社員名",
+educure_db-#     salary AS "給与額"
+educure_db-# FROM
+educure_db-#     employees;
+   社員名    | 給与額
+-------------+--------
+ 山田 太郎   |  55000
+ 佐藤 健     |  60000
+ 鈴木 花子   |  52000
+ 田中 一郎   |  58000
+ 佐々木 次郎 |  48000
+ 山田 太郎   |  55000
+ 小林 美智子 |  48000
+ 佐藤 健     |  60000
+ 鈴木 花子   |  52000
+ 田中 一郎   |  58000
+(10 行)
+
+
+educure_db=# SELECT DISTINCT
+educure_db-#     name AS "社員名",
+educure_db-#     salary AS "給与額"
+educure_db-# FROM employees;
+   社員名    | 給与額
+-------------+--------
+ 佐々木 次郎 |  48000
+ 山田 太郎   |  55000
+ 小林 美智子 |  48000
+ 佐藤 健     |  60000
+ 鈴木 花子   |  52000
+ 田中 一郎   |  58000
+(6 行)
+
+
+educure_db=#
